@@ -10,30 +10,30 @@ Authors: David Mutchler and his colleagues
 """
 
 import tkinter
-from tkinter import ttk
+from tkinter import *
 import random
 
 
 def main():
     # Root (main) window
-    root = tkinter.Tk()
+    root = Tk()
     root.title('Hello!')
 
     # Frame
-    frame1 = ttk.Frame(root)
+    frame1 = Frame(root)
     frame1.grid()
 
     # Label
-    label = ttk.Label(frame1, text='This is a Label above a Button')
+    label = Label(frame1, text='This is a Label above a Button')
     label.grid()
 
     # Two buttons
-    change_title_button = ttk.Button(frame1,
+    change_title_button = Button(frame1,
                                      text='Change the Title (above)')
     change_title_button.grid()
     change_title_button['command'] = lambda: change_title(root)
 
-    quit_button = ttk.Button(frame1, text='Quit')
+    quit_button = Button(frame1, text='Quit')
     quit_button.grid()
     quit_button['command'] = lambda: close_window(root)
 
